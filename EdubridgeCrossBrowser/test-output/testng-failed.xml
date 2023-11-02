@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [TestSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="FirefoxTest(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="MyProjectEdubridge.CrossBrowserScript">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="closeBrowser"/>
+          <include name="setBrowser"/>
+        </methods>
+      </class> <!-- MyProjectEdubridge.CrossBrowserScript -->
+      <class name="MyProjectEdubridge.LaunchEdubridge">
+        <methods>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- MyProjectEdubridge.LaunchEdubridge -->
+      <class name="MyProjectEdubridge.LoginEdubridge">
+        <methods>
+          <include name="testParameterWithXML"/>
+          <include name="setBrowser"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- MyProjectEdubridge.LoginEdubridge -->
+    </classes>
+  </test> <!-- FirefoxTest(failed) -->
+  <test thread-count="5" name="ietest(failed)">
+    <parameter name="browser" value="iebrowser"/>
+    <classes>
+      <class name="MyProjectEdubridge.CrossBrowserScript">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="closeBrowser"/>
+          <include name="setBrowser"/>
+        </methods>
+      </class> <!-- MyProjectEdubridge.CrossBrowserScript -->
+      <class name="MyProjectEdubridge.LoginEdubridge">
+        <methods>
+          <include name="setBrowser"/>
+          <include name="testParameterWithXML"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- MyProjectEdubridge.LoginEdubridge -->
+      <class name="MyProjectEdubridge.LaunchEdubridge">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="setBrowser"/>
+          <include name="launch"/>
+        </methods>
+      </class> <!-- MyProjectEdubridge.LaunchEdubridge -->
+      <class name="MyProjectEdubridge.CoursePicker">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="setBrowser"/>
+          <include name="coursepick"/>
+        </methods>
+      </class> <!-- MyProjectEdubridge.CoursePicker -->
+    </classes>
+  </test> <!-- ietest(failed) -->
+</suite> <!-- Failed suite [TestSuite] -->
